@@ -1,12 +1,19 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
 <title>Dae Private Client</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Dae — by-introduction creative consultancy, Vower Private coaching, and cultural consulting for film, music and brands. New York City, Santa Barbara, Los Angeles.">
+<meta name="description" content="Dae Private Client — by-introduction design, life coaching, creative direction and storytelling for adults, plus cultural consulting for productions, labels and projects. New York City, Santa Barbara, Los Angeles.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap">
 <style>
-/* Layout: a poem served on a marble table — a sealed black-and-marble door, one question, then a quiet house whose rooms open when touched */
+/* Layout: a sealed black-and-marble door, one question, then a quiet marble house whose spaces open when touched */
 :root{
   --stone:#F2EEE8; --stone-2:#E7E1D7; --ink:#231C1D; --ink-soft:#6A5E60; --hush:#978B86;
   --maroon:#5A1520; --oxblood:#2E0B10; --gold:#B0832F; --gold-lite:#D8B26A; --cream:#F3E9DB;
@@ -94,47 +101,38 @@ body.menu-open .scrim{opacity:1;visibility:visible}
 .drawer .foot{margin-top:36px;font-size:.85rem;color:var(--ink-soft);display:grid;gap:4px}
 
 /* ============ CAROUSEL ============ */
-.stage{position:relative;height:min(78vh,760px);min-height:460px;overflow:hidden;background:#0B0809}
-.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.2s ease,visibility 1.2s;display:grid;align-items:end;color:var(--cream)}
+.stage{position:relative;height:min(82vh,780px);min-height:500px;overflow:hidden;background:#0B0809}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.4s ease,visibility 1.4s;display:grid;align-items:end;color:var(--cream)}
 .slide.on{opacity:1;visibility:visible}
-.slide .art{position:absolute;inset:0;background-size:cover;background-position:center}
-.slide .art::before{content:"";position:absolute;inset:0;background:var(--marble);background-size:var(--ms,700px);mix-blend-mode:var(--mb,soft-light);opacity:var(--mo,.55)}
-.slide .art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.55) 100%)}
-.s1 .art{background:radial-gradient(ellipse at 70% 30%,#7A2230 0%,#3E1118 45%,#1A070B 100%)}
-.s2 .art{background:radial-gradient(ellipse at 30% 25%,#F1EBE2 0%,#CFC6B9 55%,#8E8579 100%);--mb:multiply;--mo:.9;--ms:520px}
-.s3 .art{background:radial-gradient(ellipse at 60% 40%,#2B2420 0%,#0E0B0B 70%);--mb:screen;--mo:.14}
-.s2{color:#231C1D}
-.s2 .art::after{background:linear-gradient(180deg,rgba(255,255,255,0) 40%,rgba(242,238,232,.6) 100%)}
-.slide .orb{position:absolute;right:8%;top:14%;width:min(34vw,360px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(216,178,106,.55)}
-.slide .orb::after{content:"";position:absolute;inset:18px;border-radius:50%;border:1px solid rgba(216,178,106,.25)}
-.s2 .orb{border-color:rgba(90,21,32,.4)}
-.s3 .orb{border-radius:0;width:min(28vw,300px);aspect-ratio:3/4}
-.slide .copy{position:relative;z-index:2;padding-block:0 92px;display:grid;gap:18px;max-width:760px}
-.slide .copy .cap{color:inherit;opacity:.82}
-.slide h2{font-size:clamp(2.8rem,7vw,5.6rem);font-style:italic}
-.slide .line{font-family:var(--display);font-size:clamp(1.15rem,2vw,1.45rem);font-style:italic;opacity:.9;max-width:40ch}
+.slide .art{position:absolute;inset:0;background-size:cover;background-position:var(--pos,center);transform:scale(1.04);transition:transform 8s ease-out}
+.slide.on .art{transform:scale(1)}
+.slide .art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,6,7,.15) 0%,rgba(10,6,7,.05) 30%,rgba(10,6,7,.72) 100%)}
+.s-design .art{background-image:url(images/design.jpg);--pos:center 60%}
+.s-coach .art{background-image:url(images/coaching.jpg);--pos:center 40%}
+.s-prod .art{background-image:url(images/brand.jpg);--pos:center 35%}
+.slide .copy{position:relative;z-index:2;padding-block:0 96px;display:grid;gap:16px;max-width:820px;text-shadow:0 1px 18px rgba(0,0,0,.35)}
+.slide .copy .cap{color:inherit;opacity:.88}
+.slide h2{font-size:clamp(2.1rem,4.8vw,4rem);font-style:italic;line-height:1.08}
+.slide .line{font-family:var(--display);font-size:clamp(1.1rem,1.9vw,1.4rem);font-style:italic;opacity:.94;max-width:46ch}
 .explore{justify-self:start;font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:3px;margin-top:6px}
-.controls{position:absolute;z-index:3;left:0;right:0;bottom:28px}
+.controls{position:absolute;z-index:3;left:0;right:0;bottom:30px}
 .controls .wrap{display:flex;align-items:center;gap:22px;color:var(--cream)}
 .dots{display:flex;gap:10px}
 .dots button{width:34px;height:2px;background:rgba(243,233,219,.35);transition:background .3s}
 .dots button[aria-current="true"]{background:var(--gold-lite)}
 .ctrl{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
 .ctrl:hover{opacity:1}
-.stage.light .controls .wrap{color:#231C1D}
-.stage.light .dots button{background:rgba(35,28,29,.25)}
-.stage.light .dots button[aria-current="true"]{background:var(--maroon)}
+@media (prefers-reduced-motion:reduce){.slide .art{transform:none;transition:none}}
 
 /* ============ SECTIONS ============ */
 section{padding-block:104px}
-.poem-open{padding-block:88px 40px;text-align:center}
-.poem-open .wrap{display:grid;justify-items:center;gap:18px}
-.poem-open .title{font-family:var(--display);font-size:clamp(2rem,4vw,3rem);font-weight:300}
-.poem-open .verse{text-align:center}
-.poem-open .verse::before{margin-inline:auto}
+.intro{padding-block:88px 40px;text-align:center}
+.intro .wrap{display:grid;justify-items:center;gap:18px}
+.intro .title{font-family:var(--display);font-size:clamp(2rem,4vw,3rem);font-weight:300;font-style:italic}
+.intro .lede{text-align:center;max-width:46ch}
 
 .more-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
-.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
 .svc a{background:var(--stone);display:grid;gap:10px;align-content:start;padding:28px 24px 30px;text-decoration:none;min-height:220px;position:relative;transition:background .3s}
 .svc a:hover{background:var(--stone-2)}
 .svc .n{font-family:var(--display);color:var(--gold);font-size:1rem}
@@ -146,7 +144,8 @@ section{padding-block:104px}
 .split>*{min-width:0}
 .portrait{aspect-ratio:4/5;max-width:100%;background:var(--tile);position:relative;overflow:hidden}
 .portrait::before{content:"";position:absolute;inset:0;background:var(--marble);background-size:300px;opacity:.35;mix-blend-mode:multiply}
-.portrait span{position:absolute;left:18px;bottom:16px}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.portrait::before{z-index:1;pointer-events:none;opacity:0}
 
 .rooms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px}
 .rooms figure{margin:0;display:grid;gap:12px}
@@ -154,9 +153,15 @@ section{padding-block:104px}
 .ph::before{content:"";position:absolute;inset:0;background:var(--marble);background-size:260px;opacity:.3;mix-blend-mode:multiply}
 .ph.wide{aspect-ratio:4/3}
 .ph span{position:absolute;left:14px;bottom:12px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ph.has-img::before{display:none}
+.p-sub{color:var(--ink-soft);font-size:1.05rem;max-width:56ch}
 figcaption b{font-family:var(--display);font-weight:400;font-size:1.3rem;display:block}
 figcaption{color:var(--ink-soft);font-size:.92rem}
 
+.meet{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px 24px;align-items:baseline;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:28px}
+.meet p{font-family:var(--display);font-size:1.35rem;font-style:italic}
+.meet ul{display:flex;flex-wrap:wrap;gap:8px 26px;list-style:none;margin:0;padding:0;font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-soft)}
 /* inquiry */
 .inq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:72px}
 .inq>*{min-width:0}
@@ -229,10 +234,12 @@ footer a{text-decoration:none}
   .svc,.rooms,.row2{grid-template-columns:1fr}
   .gallery figure,.gallery figure.big,.gallery figure.half{grid-column:span 12}
   .menu-btn span{display:none}
-  .slide .orb{display:none}
   .slide .copy{padding-bottom:84px}
   .stage{height:72vh}
 }
+
+@media (max-width:900px){.svc{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.svc{grid-template-columns:1fr}.slide .copy{padding-bottom:88px}.slide h2{font-size:clamp(1.7rem,7.2vw,2.4rem)}}
 </style>
 
 <!-- THE DOOR -->
@@ -253,6 +260,7 @@ footer a{text-decoration:none}
   </div>
 </div>
 
+
 <!-- MENU -->
 <div class="scrim" id="scrim"></div>
 <nav class="drawer" id="drawer" aria-label="Menu" aria-hidden="true">
@@ -260,31 +268,24 @@ footer a{text-decoration:none}
   <details open>
     <summary>Private Client</summary>
     <ul>
-      <li><a href="#interiors" data-page>Interior &amp; Exterior Design</a></li>
-      <li><a href="#coaching" data-page>Life Coach</a></li>
-      <li><a href="#brand" data-page>Creative Direction &amp; Brand</a></li>
-      <li><a href="#story" data-page>Storytelling</a></li>
+      <li><a href="#design" data-page>Design Clients</a></li>
+      <li><a href="#coaching" data-page>Life Coaching</a></li>
+      <li><a href="#brand" data-page>Creative Director &amp; Brand Strategist</a></li>
+      <li><a href="#story" data-page>Visual &amp; Written Storytelling</a></li>
       <li><a href="#seat" data-page>The Standing Seat</a></li>
     </ul>
   </details>
   <details>
-    <summary>Studio</summary>
+    <summary>Consulting</summary>
     <ul>
-      <li><a href="#vower" data-page>Vower Private</a></li>
-      <li><a href="#speaking" data-page>Speaking &amp; Workshops</a></li>
+      <li><a href="#consulting" data-page>Productions, Labels &amp; Projects</a></li>
     </ul>
   </details>
-  <details>
-    <summary>Culture</summary>
-    <ul>
-      <li><a href="#culture" data-page>Film, Music &amp; Games</a></li>
-      <li><a href="#collaborations" data-page>Houses &amp; Brands</a></li>
-    </ul>
-  </details>
-  <a class="solo" href="#the-rooms" data-close>The Rooms</a>
+  <a class="solo" href="#the-spaces" data-close>The Spaces</a>
   <a class="solo" href="#philosophy" data-close>Philosophy</a>
   <a class="solo" href="#inquire" data-close>Inquire</a>
   <div class="foot">
+    <span>By introduction · Adults only</span>
     <span>New York · Santa Barbara · Los Angeles</span>
     <a href="https://ademolatheartist.com" target="_blank" rel="noopener">ademolatheartist.com</a>
   </div>
@@ -299,41 +300,41 @@ footer a{text-decoration:none}
 </header>
 
 <main id="top">
-  <!-- THREE ROOMS, ROTATING -->
+  <!-- THREE SPACES, ROTATING -->
   <div class="stage" id="stage" aria-roledescription="carousel" aria-label="Featured services">
-    <article class="slide s1 on" aria-roledescription="slide" aria-label="1 of 3">
-      <div class="art"><div class="orb"></div></div>
+    <article class="slide s-design on" aria-roledescription="slide" aria-label="1 of 3">
+      <div class="art" role="img" aria-label="An outdoor gathering designed by Dae: white tables, navy umbrellas and florals on a lawn"></div>
       <div class="wrap copy">
-        <p class="cap">For you · Private Client</p>
-        <h2>The room was always meant for you.</h2>
-        <p class="line">Design for your home, practice for your life, direction for your name and your story.</p>
-        <a class="explore" href="#interiors" data-page>Enter Private Client</a>
+        <p class="cap">Design Clients · Interior &amp; Exterior</p>
+        <h2>Every corner, every inch, every room of your space is an opportunity for memory that'll last a lifetime.</h2>
+        <p class="line">Designing your space or home specifically for your needs and ultimate functionality.</p>
+        <a class="explore" href="#design" data-page>Enter Design</a>
       </div>
     </article>
-    <article class="slide s2" aria-roledescription="slide" aria-label="2 of 3">
-      <div class="art"><div class="orb"></div></div>
+    <article class="slide s-coach" aria-roledescription="slide" aria-label="2 of 3">
+      <div class="art" role="img" aria-label="A Central Coast slough at sunrise, clouds reflected in still water"></div>
       <div class="wrap copy">
-        <p class="cap">For your child · Vower Private</p>
-        <h2>Feed the child their own voice first.</h2>
-        <p class="line">Private coaching in voice, verse, presence and the written word, ages 8 to 18.</p>
-        <a class="explore" href="#vower" data-page>Enter the Studio</a>
+        <p class="cap">Life Coaching</p>
+        <h2>It's lonely at the top, but it doesn't have to be.</h2>
+        <p class="line">Build the village you need around you by starting with yourself. Life coaching with Dae brings out the best in you.</p>
+        <a class="explore" href="#coaching" data-page>Enter Life Coaching</a>
       </div>
     </article>
-    <article class="slide s3" aria-roledescription="slide" aria-label="3 of 3">
-      <div class="art"><div class="orb"></div></div>
+    <article class="slide s-prod" aria-roledescription="slide" aria-label="3 of 3">
+      <div class="art" role="img" aria-label="Dae speaking on The Power of Protest: From King to Hip-Hop"></div>
       <div class="wrap copy">
-        <p class="cap">For productions, labels &amp; houses</p>
-        <h2>Every beat, a grace said over bread.</h2>
-        <p class="line">Cultural consulting for film, music and brands: Afrofuturism, the origins of rap, The Last Poets' lineage.</p>
-        <a class="explore" href="#culture" data-page>Enter Culture</a>
+        <p class="cap">For productions, labels &amp; projects</p>
+        <h2>The arts are an extension of the soul.</h2>
+        <p class="line">We tell our stories so others find the courage to tell theirs.</p>
+        <a class="explore" href="#consulting" data-page>Enter Consulting</a>
       </div>
     </article>
     <div class="controls">
       <div class="wrap">
         <div class="dots" role="group" aria-label="Choose a slide">
-          <button type="button" aria-label="Private Client" aria-current="true"></button>
-          <button type="button" aria-label="Vower Private"></button>
-          <button type="button" aria-label="Culture"></button>
+          <button type="button" aria-label="Design Clients" aria-current="true"></button>
+          <button type="button" aria-label="Life Coaching"></button>
+          <button type="button" aria-label="Consulting"></button>
         </div>
         <button class="ctrl" type="button" id="prev" aria-label="Previous slide">Prev</button>
         <button class="ctrl" type="button" id="next" aria-label="Next slide">Next</button>
@@ -342,31 +343,29 @@ footer a{text-decoration:none}
     </div>
   </div>
 
-  <!-- THE POEM OPENS -->
-  <div class="poem-open">
+  <!-- QUIET INTRO -->
+  <div class="intro">
     <div class="wrap">
-      <p class="cap">A poem, served</p>
-      <p class="title">This Is How We Eat</p>
-      <p class="verse">Set the table. Marble, cool as morning;<br>the good plates out on an ordinary day.</p>
+      <p class="cap">Private Client · By introduction</p>
+      <p class="title">Quiet work. Lasting spaces. Ease.</p>
+      <p class="lede">For adults who want their homes, their lives, their names and their stories held with care, and discretion.</p>
     </div>
   </div>
 
-  <!-- MORE SERVICES -->
-  <section style="padding-top:48px">
+  <!-- EVERY SPACE -->
+  <section style="padding-top:40px">
     <div class="wrap">
       <div class="more-head">
-        <h2>Every room in the house</h2>
+        <h2>Every space in your life</h2>
         <p class="cap">Touch any one to open it</p>
       </div>
       <div class="svc">
-        <a href="#interiors" data-page><span class="n">I</span><b>Interior &amp; Exterior Design</b><span>Poetry in every corner of every room.</span><em>Open</em></a>
-        <a href="#coaching" data-page><span class="n">II</span><b>Life Coach</b><span>Awareness, ritual, choice.</span><em>Open</em></a>
-        <a href="#brand" data-page><span class="n">III</span><b>Creative Direction &amp; Brand</b><span>Identity, voice, campaign.</span><em>Open</em></a>
-        <a href="#story" data-page><span class="n">IV</span><b>Storytelling</b><span>Narrative, script, art direction.</span><em>Open</em></a>
-        <a href="#vower" data-page><span class="n">Studio</span><b>Vower Private</b><span>For young voices, 8 to 18.</span><em>Open</em></a>
-        <a href="#speaking" data-page><span class="n">Studio</span><b>Speaking &amp; Workshops</b><span>Schools, faculty, conferences.</span><em>Open</em></a>
-        <a href="#culture" data-page><span class="n">Culture</span><b>Film, Music &amp; Games</b><span>Consulting that gets it right.</span><em>Open</em></a>
-        <a href="#collaborations" data-page><span class="n">Culture</span><b>Houses &amp; Brands</b><span>Rooms, residencies, evenings.</span><em>Open</em></a>
+        <a href="#design" data-page><span class="n">I</span><b>Design Clients</b><span>Interior and exterior design for your home and spaces.</span><em>Open</em></a>
+        <a href="#coaching" data-page><span class="n">II</span><b>Life Coaching</b><span>Build your village, starting with yourself.</span><em>Open</em></a>
+        <a href="#brand" data-page><span class="n">III</span><b>Creative Director &amp; Brand Strategist</b><span>Identity, positioning, voice, campaign.</span><em>Open</em></a>
+        <a href="#story" data-page><span class="n">IV</span><b>Visual &amp; Written Storytelling</b><span>Narrative, script, art direction.</span><em>Open</em></a>
+        <a href="#consulting" data-page><span class="n">&amp; more</span><b>Productions, Labels &amp; Projects</b><span>Cultural consulting, wherever the fit is right.</span><em>Open</em></a>
+        <a href="#seat" data-page><span class="n">All four</span><b>The Standing Seat</b><span>On call across your homes and your work.</span><em>Open</em></a>
       </div>
     </div>
   </section>
@@ -377,22 +376,27 @@ footer a{text-decoration:none}
       <div style="display:grid;gap:26px">
         <p class="cap">A visionary and a poet</p>
         <h2>The bare minimum should be excellent.</h2>
-        <p class="lede">Ademola Oyewole-Davis, Dae, is a performing artist, poet, educator and creative director, son of Abiodun Oyewole of The Last Poets. Clients describe the same thing first: ease.</p>
+        <p class="lede">Ademola Oyewole-Davis, Dae, is a performing artist, poet, educator and creative director, son of Abiodun Oyewole of The Last Poets.</p>
+        <p class="lede">Private Client work is quiet and unhurried. We meet wherever you're at ease: over coffee, a drink or a round of golf, or in first class on the way to Dubai.</p>
         <p class="verse">We carry the ones who rhymed before us.</p>
       </div>
-      <div class="portrait" role="img" aria-label="Portrait of Dae, photograph to come"><span class="cap">Portrait</span></div>
+      <div class="portrait"><img src="images/portrait.jpg" alt="Ademola Oyewole-Davis on stage in a velvet jacket, beside a podium" loading="lazy" width="1100" height="1769"></div>
     </div>
   </section>
 
-  <!-- THE ROOMS -->
-  <section id="the-rooms" style="background:var(--veil)">
+  <!-- THE SPACES -->
+  <section id="the-spaces" style="background:var(--veil)">
     <div class="wrap">
-      <p class="cap">The Rooms</p>
-      <h2 style="margin-top:14px">Where strangers pass the salt and leave as kin.</h2>
+      <p class="cap">The Spaces</p>
+      <h2 style="margin-top:14px">Where people who'd never think to find each other find their kin.</h2>
       <div class="rooms">
-        <figure><div class="ph"><span class="cap">The living room</span></div><figcaption><b>The living room</b>The kind where Quincy Jones had Will Smith audition.</figcaption></figure>
-        <figure><div class="ph"><span class="cap">The writers' room</span></div><figcaption><b>The writers' room</b>Storyboards and scripts that move the culture.</figcaption></figure>
+        <figure><div class="ph"><span class="cap">The living space</span></div><figcaption><b>The living space</b>The kind where Quincy Jones had Will Smith audition.</figcaption></figure>
+        <figure><div class="ph"><span class="cap">The writers' space</span></div><figcaption><b>The writers' space</b>Storyboards and scripts that move the culture.</figcaption></figure>
         <figure><div class="ph"><span class="cap">GVCH</span></div><figcaption><b>Great Valley Cultural Hub</b>Open mics, movie nights, the Goleta Poetry Club.</figcaption></figure>
+      </div>
+      <div class="meet" style="margin-top:72px">
+        <p>In broad daylight, hidden in plain sight.</p>
+        <ul><li>Coffee</li><li>A drink</li><li>Dinner</li><li>Golf</li><li>Your home</li><li>In flight</li></ul>
       </div>
     </div>
   </section>
@@ -402,7 +406,7 @@ footer a{text-decoration:none}
     <div class="wrap inq">
       <div style="display:grid;gap:20px;align-content:start">
         <p class="cap">Inquire</p>
-        <h2>Why wait for a holiday to use the good china?</h2>
+        <h2>Begin with a conversation.</h2>
         <p class="verse">Why not today?</p>
         <p class="fine" style="margin-top:12px"><b>ademola.lewis@gmail.com</b><br>(347) 641-8888<br>A personal reply within one business day.</p>
       </div>
@@ -414,18 +418,15 @@ footer a{text-decoration:none}
           </div>
           <div class="row2">
             <label for="f-svc">Interested in<select id="f-svc" name="svc">
-              <option value="Vower Private">Vower Private (for my child)</option>
-              <option value="Interior & Exterior Design">Interior &amp; Exterior Design</option>
-              <option value="Life Coach">Life Coach</option>
-              <option value="Creative Direction & Brand">Creative Direction &amp; Brand</option>
-              <option value="Storytelling">Storytelling</option>
+              <option value="Design Clients">Design Clients</option>
+              <option value="Life Coaching">Life Coaching</option>
+              <option value="Creative Director & Brand Strategist">Creative Director &amp; Brand Strategist</option>
+              <option value="Visual & Written Storytelling">Visual &amp; Written Storytelling</option>
               <option value="The Standing Seat">The Standing Seat</option>
-              <option value="Speaking & Workshops">Speaking &amp; Workshops</option>
-              <option value="Film, Music & Games">Film, Music &amp; Games</option>
-              <option value="Houses & Brands">Houses &amp; Brands</option>
+              <option value="Productions, Labels & Projects">Productions, Labels &amp; Projects</option>
               <option value="Not sure yet">Not sure yet</option>
             </select></label>
-            <label for="f-meet">First meeting<select id="f-meet" name="meet"><option>Coffee</option><option>Lunch</option><option>Dinner</option><option>Golf</option><option>Pickleball</option><option>At my home</option><option>A call</option></select></label>
+            <label for="f-meet">First meeting<select id="f-meet" name="meet"><option>Coffee</option><option>A drink</option><option>Lunch</option><option>Dinner</option><option>Golf</option><option>At my home</option><option>A call</option></select></label>
           </div>
           <label for="f-city">City<select id="f-city" name="city"><option>Santa Barbara</option><option>Los Angeles</option><option>New York City</option><option>Elsewhere</option></select></label>
           <label for="f-note">What you have in mind<textarea id="f-note" name="note"></textarea></label>
@@ -449,7 +450,7 @@ footer a{text-decoration:none}
 <footer>
   <div class="wrap">
     <span>Dae · An Ikase Holdings company</span>
-    <span>New York · Santa Barbara · Los Angeles</span>
+    <span>By introduction · New York · Santa Barbara · Los Angeles</span>
     <a href="https://ademolatheartist.com" target="_blank" rel="noopener">ademolatheartist.com</a>
   </div>
 </footer>
@@ -457,69 +458,52 @@ footer a{text-decoration:none}
 <!-- ================= SERVICE PAGES ================= -->
 <template id="page-tpl">
   <div class="page" role="dialog" aria-modal="true">
-    <div class="top"><div class="wrap"><button type="button" data-back>← All rooms</button><a href="#inquire" data-inq>Inquire</a></div></div>
+    <div class="top"><div class="wrap"><button type="button" data-back>← All spaces</button><a href="#inquire" data-inq>Inquire</a></div></div>
     <div class="wrap body"></div>
   </div>
 </template>
 
 <script type="application/json" id="pages">
 {
- "interiors":{"cap":"Private Client · I","title":"Interior &amp; Exterior Design","verse":"A revolutionary eye makes poetry come to life in every corner of every room.",
-  "work":[["big","Family living room, Santa Barbara","An open plan reworked twice, on no budget, for two adults and two small children."],["","COMMA workshop room","A U-shaped room where the layout became a ritual the writers now set up themselves."],["half","GVCH patio at Crushcakes, Goleta","An outdoor stage for open mics and movie nights."],["half","OLO residences (concept)","NYC fire escapes reimagined as balconies on the Central Coast."],["","Four Oaks estate (concept)","A Hope Ranch estate merged with two Brooklyn brownstones."]],
-  "how":["The First Conversation, at your home","A written brief and a room story","Concept, art program and sourcing","Install, with a credentialed design partner for drawings"],
-  "includes":["A themed art piece for each room","Layouts drawn in SketchUp","Sourcing lists with alternates","A bound record of the work"],
-  "rates":[["The First Conversation","$1,500","Credited to any engagement"],["Room Story","from $15,000","One signature room"],["Residence Direction","from $60,000","A whole-home concept and art program"]],
-  "qa":[["Do you work with my architect or designer?","Yes. Dae leads the story and art direction, and works beside your architect, contractor or a credentialed interior designer for drawings and permits."],["Where do you work?","Santa Barbara, Los Angeles and New York, and wherever your properties are."],["Can we start with one room?","Most clients do. A Room Story is the usual first engagement."]]},
- "coaching":{"cap":"Private Client · II","title":"Life Coach","verse":"Social-emotional daily practices, and actively choosing the best decisions for your current and future self.",
-  "work":[["half","Awareness","Noticing what your days are actually made of."],["half","Ritual","Small, repeated acts that hold the life you want."],["","Choice","Deciding on purpose, for your current and future self."]],
-  "how":["The First Conversation","Three practices chosen together","Sessions every other week","Access between sessions"],
-  "includes":["A written practice plan","A Vower journal","Check-ins between sessions","A quarter-end review"],
+ "design":{"cap":"Interior &amp; Exterior Design","title":"Design Clients","verse":"Every corner, every inch, every room of your space is an opportunity for memory that'll last a lifetime.","sub":"Designing your space or home specifically for your needs and ultimate functionality.",
+  "work":[["big","An outdoor gathering","Tables, shade, florals and flow for a garden reception.","images/design.jpg"],["","Family living space, Santa Barbara","An open plan reworked twice, on no budget, for two adults and two small children."],["","COMMA workshop space","A U-shaped room where the layout became a ritual the writers now set up themselves."],["half","GVCH patio at Crushcakes, Goleta","An outdoor stage for open mics and movie nights."],["half","OLO residences (concept)","NYC fire escapes reimagined as balconies on the Central Coast."]],
+  "how":["The First Conversation, at your home","A written brief and the story of the space","Concept, art program and sourcing","Install, with a credentialed design partner for drawings"],
+  "includes":["A themed art piece for each space","Layouts drawn in SketchUp","Sourcing lists with alternates","A bound record of the work"],
+  "rates":[["The First Conversation","$1,500","Credited to any engagement"],["Signature Space","from $15,000","One living space, garden or terrace"],["Residence Direction","from $60,000","A whole-home concept and art program"]],
+  "qa":[["Do you work with my architect or designer?","Yes. Dae leads the story and art direction, and works beside your architect, contractor or a credentialed interior designer for drawings and permits."],["Where do you work?","Santa Barbara, Los Angeles and New York, and wherever your properties are."],["Can we start with one space?","Most clients do. A Signature Space is the usual first engagement."]]},
+ "coaching":{"cap":"Private Client · II","title":"Life Coaching","verse":"It's lonely at the top, but it doesn't have to be.","sub":"Build the village you need around you by starting with yourself. Life coaching with Dae brings out the best in you.",
+  "work":[["big","Awareness, Ritual, Choice","Noticing what your days are made of, holding them with small repeated acts, and deciding on purpose for your current and future self.","images/coaching.jpg"]],
+  "how":["The First Conversation","Three practices chosen together","Sessions every other week, wherever you're at ease","Access between sessions"],
+  "includes":["A written practice plan","A bound journal","Check-ins between sessions","A quarter-end review"],
   "rates":[["A Quarter of Practice","$12,000","Three months"],["A Year of Practice","$42,000","Twelve months"]],
-  "qa":[["Is this therapy?","No. This is coaching. For anything clinical, Dae refers you to licensed therapists."],["Can my partner join?","Yes. Couples and family sessions are available within an engagement."]]},
- "brand":{"cap":"Private Client · III","title":"Creative Direction &amp; Brand","verse":"Brand identity, positioning and voice, campaign direction.",
-  "work":[["big","COMMA","Identity, voice and programming copy for a community arts nonprofit across a multi-school network."],["","Vower","A vocal coaching brand, journal and licensable curriculum."],["","The Last Poets","Website, event and programming copy."]],
+  "qa":[["Is this therapy?","No. This is coaching. For anything clinical, Dae refers you to licensed therapists."],["Can my partner join?","Yes. Couples sessions are available within an engagement."],["Is it confidential?","Completely. Private Client work is by introduction and kept quiet."]]},
+ "brand":{"cap":"Private Client · III","title":"Creative Director &amp; Brand Strategist","verse":"Your name, your voice and your work, told as one story.","sub":"Brand identity, positioning and voice, campaign direction.",
+  "work":[["big","The Power of Protest: From King to Hip-Hop","A talk on the evolution of revolution, from the civil rights movement to rap.","images/brand.jpg"],["","COMMA","Identity, voice and programming copy for a community arts nonprofit."],["","Vower","A coaching brand, journal and licensable curriculum."],["","The Last Poets","Website, event and programming copy."]],
   "how":["The First Conversation","Positioning and voice","Identity and campaign direction","Launch, with your team"],
   "includes":["A brand story and voice guide","Campaign concepts","Copy for site and launch","Sonic and spoken-word direction"],
   "rates":[["Brand Direction","$8,500 / month","Three-month minimum"]],
   "qa":[["Do you design logos?","Dae directs identity and works with designers you choose or ones he brings."]]},
- "story":{"cap":"Private Client · IV","title":"Storytelling","verse":"Narrative concept, copy and scriptwriting, art direction.",
+ "story":{"cap":"Private Client · IV","title":"Visual &amp; Written Storytelling","verse":"The stories we keep are the ones told with care.","sub":"Narrative concept, copy and scriptwriting, art direction.",
   "work":[["half","Cathie Wright-Lewis, author","Creative director and consultant since 2012."],["half","Adelaide Sanford Institute, New York","Creative director and consultant, 2016 to 2020."],["","Founder stories","Speeches, origin stories and pitch narratives."],["","Family legacy books","A family's story, written and bound."],["","Film narrative","Concept and script for short film."]],
   "how":["The First Conversation","Interviews and archive","Draft, read aloud, revise","Final piece, bound or produced"],
   "includes":["Interviews","Drafts read aloud together","Art direction for print or film","Final files and a bound copy"],
   "rates":[["Storytelling Commission","from $12,000","Founder story, legacy book, speech or film narrative"]],
   "qa":[["How long does a legacy book take?","Usually three to six months, depending on interviews and archive."]]},
- "seat":{"cap":"Private Client","title":"The Standing Seat","verse":"All four disciplines, on call, across your homes and your work.",
-  "work":[["half","Your homes","Design direction as rooms change."],["half","Your name","Brand, voice and story as your work grows."]],
+ "seat":{"cap":"Private Client","title":"The Standing Seat","verse":"All four disciplines, on call, across your homes and your work.","sub":"For the few who want Dae at the table for the long run.",
+  "work":[["half","Your spaces","Design direction as your homes change."],["half","Your name","Brand, voice and story as your work grows."]],
   "how":["By invitation","A standing monthly conversation","On call between them","An annual review"],
-  "includes":["All four disciplines","Priority scheduling","First invitations to GVCH evenings","Four seats only"],
+  "includes":["All four disciplines","Priority scheduling","Travel to you","Four seats only"],
   "rates":[["The Standing Seat","$15,000 / month","Four seats, by invitation"]],
   "qa":[["How do I get a seat?","Most seats go to clients who began with a single engagement. Ask during your First Conversation."]]},
- "vower":{"cap":"Studio · Ages 8 to 18","title":"Vower Private","verse":"Feed the child their own voice first.",
-  "work":[["big","The Vower journal","The bound journal every Private Term student keeps."],["","Urban Word NYC","Where the method began, with young poets."],["","Saint Ann's, Brooklyn","Teaching artist work with young writers."],["","Camp Half-Blood, Brooklyn","Voice and story with young campers."]],
-  "how":["A Discovery Session, then fifteen minutes with you","Ten sessions across three chambers","A closing recording","A Family Salon, if you like"],
-  "includes":["Breath &amp; Instrument","Verse &amp; Presence","Written Word","A parent debrief every session"],
-  "rates":[["Discovery Session","$350","75 minutes plus the parent debrief"],["Private Term","$4,800","Ten sessions, journal, recording"],["Audition &amp; Showcase Intensive","$8,500","Six weeks"],["Family Salon","$6,500","An evening in your home"]],
-  "qa":[["Where do sessions happen?","In your home, with a parent or guardian on site, or in the studio."],["Is there a background check?","Yes. Families receive Dae's background check before the first session, and Dae never messages students privately; everything goes through you."],["What age is right?","Eight to eighteen. Younger siblings can join a Family Salon."]]},
- "speaking":{"cap":"Studio","title":"Speaking &amp; Workshops","verse":"Social-emotional talks with tools teachers can use on Monday.",
-  "work":[["half","Faculty professional development","One-day, three-session PDs for middle and high school teachers."],["half","School assemblies","Spoken word that holds a gym full of students."],["","MCASB","2024 Roots &amp; Branches Arts Fellow."],["","CAW Residency","2025–26, Storytelling Is Our Revolution."],["","Keynotes","The origins of rap and the spoken-word lineage."]],
-  "how":["A call with your team","A program shaped to your goals","The day itself","Follow-up tools for staff"],
-  "includes":["Talk or workshop","Classroom tools","Q&amp;A","Optional performance"],
-  "rates":[["Talks, workshops and PD","By inquiry","Fees depend on format and travel"]],
-  "qa":[["Do you travel?","Yes, from Santa Barbara to Los Angeles, New York and beyond."]]},
- "culture":{"cap":"Culture","title":"Film, Music &amp; Games","verse":"We carry the ones who rhymed before us; every beat a grace said over bread.",
-  "work":[["big","The Last Poets lineage","Son of Abiodun Oyewole. The origins of rap, told from the inside."],["","Afrofuturism","Worlds where the past and future speak to each other."],["","Original verse","Poems and performances, licensed for screen and sound."]],
-  "how":["Read the script or treatment","Cultural and historical consulting through production","Soundtrack and music direction","Talks and screenings at release"],
-  "includes":["Creative and cultural consulting","Soundtrack concept and curation","Licensed original verse","Release events"],
+ "consulting":{"cap":"Consulting · And more","title":"Productions, Labels &amp; Projects","verse":"The arts are an extension of the soul; we tell our stories so others find the courage to tell theirs.","sub":"Cultural consulting on the written word, music and branding, specializing in cultural relevance and Afrofuturism, from a family with a literal hand in the start of rap.",
+  "work":[["big","The Last Poets lineage","Son of Abiodun Oyewole. The origins of rap, told from the inside."],["","Afrofuturism","Worlds where the past and future speak to each other."],["","Original verse","Poems and performances, licensed for screen and sound."],["","Your platform","If you need what Dae brings, ask. If the fit is right, we build it together."]],
+  "how":["Read the script, treatment or brief","Cultural consulting through the work","Music, voice and written-word direction","Talks and events at release"],
+  "includes":["Creative and cultural consulting","Soundtrack and music direction","Licensed original verse","Release events"],
   "rates":[["Engagements","By inquiry","Through Dae's company, with representation"]],
-  "qa":[["Do you license your poems?","Yes, by license. Ownership stays with the writer."]]},
- "collaborations":{"cap":"Culture","title":"Houses &amp; Brands","verse":"Partnerships with design houses, galleries, hotels and brands that care about craft.",
-  "work":[["half","Curated rooms","A signature room built around an artist, story or collection."],["half","Artist residencies","A season of salons inside a showroom or gallery."],["","Evenings","Private readings and listening nights for a brand's clients."],["","Words &amp; voice","Campaign language and sonic identity."]],
-  "how":["A conversation","A concept and a lookbook","The room, the residency or the evening","A record of what happened"],
-  "includes":["Concept","Programming","Performance","Documentation"],
-  "rates":[["Collaborations","By inquiry","Fee plus credit"]],
-  "qa":[["What kind of partners?","Design houses, galleries, hotels and brands that care about craft as much as their clients do."]]}
+  "qa":[["Do you license your poems?","Yes, by license. Ownership stays with the writer."],["What else do you consult on?","Anything where Dae's expertise is the right fit. Start with a conversation."]]}
 }
 </script>
+
 
 <script>
 (function(){
@@ -547,7 +531,6 @@ footer a{text-decoration:none}
     idx=(i+slides.length)%slides.length;
     slides.forEach(function(s,k){ s.classList.toggle('on',k===idx); s.setAttribute('aria-hidden',k===idx?'false':'true'); });
     dots.forEach(function(d,k){ d.setAttribute('aria-current',k===idx?'true':'false'); });
-    stage.classList.toggle('light', slides[idx].classList.contains('s2'));
   }
   function startRotation(){ clearInterval(timer); if(!paused) timer=setInterval(function(){show(idx+1);},6500); }
   function setPaused(p){ paused=p; pauseBtn.textContent=p?'Play':'Pause'; pauseBtn.setAttribute('aria-pressed',p?'true':'false'); startRotation(); }
@@ -571,8 +554,8 @@ footer a{text-decoration:none}
   function build(key){
     var p=PAGES[key], node=tpl.content.firstElementChild.cloneNode(true), b=node.querySelector('.body');
     node.setAttribute('aria-label',p.title.replace(/&amp;/g,'&'));
-    var html='<div class="p-head"><p class="cap">'+p.cap+'</p><h1>'+p.title+'</h1><p class="verse">'+p.verse+'</p></div>';
-    html+='<div class="gallery">'+p.work.map(function(w){ return '<figure class="'+w[0]+'"><div class="ph"><span class="cap">'+w[1]+'</span></div><figcaption><b>'+w[1]+'</b>'+w[2]+'</figcaption></figure>'; }).join('')+'</div>';
+    var html='<div class="p-head"><p class="cap">'+p.cap+'</p><h1>'+p.title+'</h1><p class="verse">'+p.verse+'</p>'+(p.sub?'<p class="p-sub">'+p.sub+'</p>':'')+'</div>';
+    html+='<div class="gallery">'+p.work.map(function(w){ var media=w[3]?'<div class="ph has-img"><img src="'+w[3]+'" alt="'+w[1].replace(/"/g,'')+'" loading="lazy"></div>':'<div class="ph"><span class="cap">'+w[1]+'</span></div>'; return '<figure class="'+w[0]+'">'+media+'<figcaption><b>'+w[1]+'</b>'+w[2]+'</figcaption></figure>'; }).join('')+'</div>';
     html+='<div class="facts"><div><h3>How it works</h3><ol>'+p.how.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ol></div>';
     html+='<div><h3>What\'s included</h3><ul>'+p.includes.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul></div>';
     html+='<div><h3>Rates</h3><div class="rates">'+p.rates.map(function(r){return '<div class="rate"><b>'+r[0]+'</b><i>'+r[1]+'</i><span>'+r[2]+'</span></div>';}).join('')+'</div></div></div>';
@@ -626,4 +609,5 @@ footer a{text-decoration:none}
 })();
 </script>
 
-</body></html>
+</body>
+</html>
